@@ -1,0 +1,539 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+  background: #e0d7d7;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #e2ba34;
+}
+
+h1 {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+h1 .script-letter {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2em; /* slightly larger */
+  display: inline-block;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  position: -10;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero .overlay {
+ position: absolute;
+  top: 0; 
+  left: 0;
+  width: 96%;
+  height: 92.5%;
+  background-color: rgba(0, 0, 0, 0.531); /* semi-transparent black */
+  padding: 2em;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+}
+
+
+.hero .logo {
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+.btn {
+  background-color: #d6b358;
+  color: #000;
+  padding: 1em 2em;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+about stylying 
+
+/* Hero Section with background */
+.about-hero {
+
+  background: url('images/about\ banner.jpg');
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: -100;
+  color: #a1a11d;
+}
+
+.about-overlay {
+   background: url('images/about\ banner.jpg');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #dadf49;
+  text-align: center;
+  padding: 2em 3em;
+  border-radius: 12px;
+}
+
+.about-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-overlay p {
+  font-size: 1rem;
+  color: #f0c06c;
+}
+
+.about-overlay span.current {
+  color: #b7ad3c;
+  font-weight: bold;
+}
+
+.about-details {
+  padding: 2rem;
+  background-color: #f5f5f0; /* Optional */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* Makes it responsive */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  width: 750px; /* Adjust as needed */
+}
+
+.about-text {
+  flex: 10;
+  font-family: 'Georgia', serif;
+  color: #2e2e2e;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.event-amenities {
+  background-color: #fff;
+  padding: 4em 2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.event-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Image Card */
+.event-image-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(241, 197, 17, 0.2);
+  padding: 1.5em;
+  text-align: center;
+  width: 360px;
+}
+
+.event-image-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.event-image-card p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  margin-top: 1em;
+  color: #5a3c00;
+}
+
+/* Badges */
+.event-badges {
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #8a1935;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.badge img {
+  width: 22px;
+  height: 22px;
+}
+
+.badge.highlight {
+  background: linear-gradient(to right, #8a1935 50%, #b38c57 50%,);
+}
+
+/* Enquire Button */
+.enquire-btn {
+  display: inline-block;
+  background-color: #cacf35;
+  color: white;
+  padding: 0.6em 1.5em;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 2em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.event-contact {
+  margin-top: 1em;
+  font-size: 1rem;
+  color: #333;
+}
+
+.offers, .villas, .testimonials {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.villa-grid > div, .offer-grid > div {
+  margin: 2em 0;
+}
+
+.offers .offer-grid,
+.villas .villa-grid,
+.testimonials .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+footer.footer {
+  background-color: #531f32;
+  color: #fff;
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.socials img {
+  width: 30px;
+  margin: 0 10px;
+}
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 500;
+  border-radius: 40px;
+  padding: 0.3em 0.8em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-combo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-combo .logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo-combo .logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  color: #d6b147;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #d6b358;
+}
+
+.call-btn {
+  background: #d6b358;
+  color: black;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+body {
+  scroll-behavior: smooth;
+  padding-top: 80px;
+}
+
+/*package*/
+
+.package-card {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.package-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  color: #aa1e43;
+}
+
+.package-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.package-card ul {
+  list-style-type: disc;
+  padding-left: 1.2em;
+  text-align: left;
+  color: #444;
+  margin-bottom: 1.5em;
+}
+
+/*amenities*/
+.filter-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin: 2em auto;
+}
+
+.chip {
+  background-color: #8a1935;
+  color: white;
+  padding: 0.6em 1.4em;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chip:hover,
+.chip.active {
+  background-color: #b88a4a;
+  color: white;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.event-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  color: #5a3c00;
+  margin: 1em 0;
+}
+
+/*testimonials*/
+.testimonials {
+  padding: 4em 2em;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.google-icon {
+  width: 26px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.polaroid-scroll {
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+  padding: 1em 0;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+.polaroid-review {
+  background: white;
+  border: 6px solid #fff;
+  width: 230px;
+  min-width: 230px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.polaroid-review:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.polaroid-review img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.7em;
+}
+
+.polaroid-review .quote {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 0.5em;
+}
+
+.polaroid-review .name {
+  font-weight: bold;
+  color: #aa1e43;
+  margin-bottom: 0.3em;
+}
+
+.stars {
+  color: #f4c150;
+  font-size: 1.1rem;
+}
+
+
