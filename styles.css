@@ -376,8 +376,7 @@ footer.footer {
 .socials img {
   width: 30px;
   margin: 0 10px;
-}
-/* Navbar Styles */
+}/* Navbar Styles */
 .navbar {
   position: fixed;
   top: 10px;
@@ -389,6 +388,7 @@ footer.footer {
   z-index: 500;
   border-radius: 40px;
   padding: 0.3em 0.8em;
+  transition: width 0.3s;
 }
 
 .nav-container {
@@ -449,6 +449,50 @@ footer.footer {
 body {
   scroll-behavior: smooth;
   padding-top: 80px;
+}
+
+/* ====== Mobile Friendly ====== */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    padding: 0.3em 0.5em;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* hidden by default, toggle via JS for hamburger */
+    gap: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  .nav-links li a {
+    font-size: 1em;
+  }
+
+  .call-btn {
+    margin-top: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+}
+
+/* Show nav links when active */
+.nav-links.active {
+  display: flex;
 }
 
 /*package*/
