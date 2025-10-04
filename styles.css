@@ -376,7 +376,10 @@ footer.footer {
 .socials img {
   width: 30px;
   margin: 0 10px;
-}/* Navbar Styles */
+}
+
+/* Navbar Styles */
+/* ================= Navbar Styles ================= */
 .navbar {
   position: fixed;
   top: 10px;
@@ -444,6 +447,11 @@ footer.footer {
   font-weight: bold;
   font-size: 0.9em;
   white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.call-btn:hover {
+  background-color: #e0aa38;
 }
 
 body {
@@ -451,7 +459,7 @@ body {
   padding-top: 80px;
 }
 
-/* ====== Mobile Friendly ====== */
+/* ================= Mobile Friendly ================= */
 @media (max-width: 768px) {
   .navbar {
     width: 90%;
@@ -466,7 +474,7 @@ body {
   .nav-links {
     flex-direction: column;
     width: 100%;
-    display: none; /* hidden by default, toggle via JS for hamburger */
+    display: none; /* hidden by default, toggle via JS */
     gap: 0.5em;
     margin-top: 0.5em;
   }
@@ -485,14 +493,21 @@ body {
   .hamburger {
     display: block;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #ffffff;
+    align-self: flex-end;
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
   }
 }
 
-/* Show nav links when active */
-.nav-links.active {
-  display: flex;
+/* ================= Optional Smooth Transition ================= */
+.nav-links li a,
+.call-btn {
+  transition: all 0.3s ease;
 }
 
 /*package*/
