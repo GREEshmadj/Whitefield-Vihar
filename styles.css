@@ -452,127 +452,83 @@ body {
 }
 
 /*package*/
-/* Packages Section */
+<style>
 .offers {
-  padding: 4rem 2rem;
+  padding: 20px;
+  background-color: #fffdf5;
   text-align: center;
-  background: #f9f9f9;
+  font-family: Arial, sans-serif;
 }
 
 .offers h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff7f50;
 }
 
 .offer-grid {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Package Card */
 .package-card {
-  background: #fff;
+  display: flex;
+  background-color: #ffffff;
   border-radius: 15px;
-  padding: 1.5rem;
-  max-width: 320px;
-  flex: 1 1 300px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.package-card:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-direction: row;
 }
 
 .package-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  width: 120px;
+  object-fit: cover;
 }
 
-.package-card h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.package-card p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #444;
-}
-
-.package-card ul {
+.package-info {
+  padding: 15px;
   text-align: left;
-  margin: 1rem 0;
-  padding-left: 1.2rem;
+  flex: 1;
 }
 
-.package-card ul li {
-  margin: 0.5rem 0;
+.package-info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ff6347;
 }
 
-.call-btn {
-  display: inline-block;
-  background: #cbaf3c;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: 0.3s;
+.package-info p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #555;
 }
 
-.call-btn:hover {
-  background: #000000;
+.package-info ul {
+  font-size: 12px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-/* -------- Responsive (Tablet) -------- */
-@media (max-width: 768px) {
-  .offers h2 {
-    font-size: 2rem;
-  }
 
-  .offer-grid {
-    gap: 1.5rem;
-  }
-
+/* Responsive: stack image on top for very small screens */
+@media (max-width: 500px) {
   .package-card {
-    max-width: 100%;
-  }
-}
-
-/* -------- Responsive (Phone) -------- */
-@media (max-width: 480px) {
-  .offers {
-    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .offers h2 {
-    font-size: 1.8rem;
-  }
-
-  .package-card {
-    padding: 1rem;
-  }
-
-  .package-card h4 {
-    font-size: 1.3rem;
-  }
-
-  .package-card p,
-  .package-card ul li {
-    font-size: 0.95rem;
-  }
-
-  .call-btn {
+  .package-card img {
     width: 100%;
-    padding: 0.9rem;
-    font-size: 1rem;
+    height: auto;
+  }
+
+  .package-info {
+    text-align: center;
   }
 }
-
-
 /*amenities*/
 .filter-chips {
   display: flex;
