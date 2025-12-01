@@ -87,47 +87,16 @@ h1 {
 
 /* -------- Responsive (Mobile) -------- */
 @media (max-width: 768px) {
-  .logo {
-    width: 90px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  .call-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
+  .hamburger { display: block; font-size: 1.9rem; padding: 8px; }
+  .nav-links li a { padding: 12px 10px; display: block; font-size: 1.05rem; }
+  .call-btn { padding: 12px; font-size: 1rem; border-radius: 10px; width: 100%; box-sizing: border-box; }
+  .navbar { top: 10px; left: 50%; transform: translateX(-50%); width: 92%; border-radius: 18px; padding: .4rem; }
 }
 
 @media (max-width: 480px) {
-  .overlay {
-    padding: 1rem;
-  }
-
-  .logo {
-    width: 70px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
-  .call-btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
+  .about-container { padding: 0 1rem; gap: 1rem; }
+  .about-image img { max-width: 100%; height: auto; border-radius: 12px; }
+  .about-text p { font-size: 1rem; line-height: 1.5; }
 }
 
 about stylying 
@@ -137,7 +106,7 @@ about stylying
 .about-hero {
   position: relative;
   height: 50vh;
-  background: url("images/your-banner.jpg") no-repeat center center/cover;
+  background: url("images/about\ banner.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +114,7 @@ about stylying
 }
 
 .about-overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.075);
   width: 100%;
   height: 100%;
   display: flex;
@@ -182,6 +151,7 @@ about stylying
 }
 
 .about-text {
+  color: #000;
   flex: 1;
   opacity: 0;
   transform: translateY(30px);
@@ -356,159 +326,76 @@ about stylying
   gap: 2em;
   margin-top: 2em;
 }
-
-footer.footer {
-  background-color: #531f32;
-  color: #fff;
-  padding: 3em 2em;
+.footer {
+  background: #08080818;
+  color: #000000;
   text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
 }
 
 .footer h3 {
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
-.footer a {
-  color: #fff;
+.footer p {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.socials {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .socials img {
-  width: 30px;
-  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-/* Navbar Styles */
-/* ================= Navbar Styles ================= */
-.navbar {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 65%;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 500;
-  border-radius: 40px;
-  padding: 0.3em 0.8em;
-  transition: width 0.3s;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 1.2em;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo-combo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.mobile-cta {
+  background: #ffcc00;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 6px;
   text-decoration: none;
-}
-
-.logo-combo .logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-.logo-combo .logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
-  color: #d6b147;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-}
-
-.nav-links li a {
-  color: #ffffff;
   font-weight: 600;
-  transition: color 0.3s;
+  display: inline-block;
+  margin-top: 5px;
 }
 
-.nav-links li a:hover {
-  color: #d6b358;
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
-.call-btn {
-  background: #d6b358;
-  color: black;
-  padding: 0.4em 0.8em;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 0.9em;
-  white-space: nowrap;
-  transition: background 0.3s;
+.footer-links a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.call-btn:hover {
-  background-color: #e0aa38;
+.footer-links a:hover {
+  color: #ffcc00;
 }
 
-body {
-  scroll-behavior: smooth;
-  padding-top: 80px;
+.footer .copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #666;
 }
 
-/* ================= Mobile Friendly ================= */
-@media (max-width: 768px) {
-  .navbar {
-    width: 90%;
-    padding: 0.3em 0.5em;
-  }
 
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none; /* hidden by default, toggle via JS */
-    gap: 0.5em;
-    margin-top: 0.5em;
-  }
-
-  .nav-links li a {
-    font-size: 1em;
-  }
-
-  .call-btn {
-    margin-top: 0.5em;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Hamburger icon */
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8em;
-    color: #ffffff;
-    align-self: flex-end;
-  }
-
-  /* Show nav links when active */
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-/* ================= Optional Smooth Transition ================= */
-.nav-links li a,
-.call-btn {
-  transition: all 0.3s ease;
-}
 
 /*package*/
 .offers {
@@ -714,4 +601,287 @@ body {
   font-size: 1.1rem;
 }
 
+/*call button*/
 
+.mobile-cta{
+ position: fixed;
+ bottom: 14px;
+ left: 50%;
+ transform: translateX(-50%);
+ z-index: 999;
+ background: linear-gradient(90deg,#ff7a2d,#d6b358);
+ color: #000;
+ padding: 12px 18px;
+ border-radius: 0px;
+ font-weight: 700;
+ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+ display: none;
+}
+/* show only on small screens */
+@media (max-width: 768px){
+  .mobile-cta { display: block; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .tagline { color: #fff; opacity: .95; }
+  .nav-links li a { color: #fff; }
+}
+
+
+/* Navbar Styles */
+/* ---------- BASE / DESKTOP STYLES ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding-top: 70px; /* so content doesn't hide behind navbar */
+  background: #2b2b2b;
+  color: #fff;
+}
+
+/* ---------- NAVBAR (DESKTOP BASE) ---------- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;              /* full width – no more cutting */
+  background: transparent;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 8px auto;
+  padding: 8px 16px;
+  background-color: #111;             /* pill background */
+  border-radius: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* logo */
+
+.logo-combo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-combo .logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-combo .logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  color: #d6b147;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* links */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  flex: 1;                /* use remaining space */
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links li a:hover {
+  color: #d6b358;
+}
+
+/* call button */
+
+.nav-contact {
+  white-space: nowrap;
+}
+
+.call-btn {
+  background: #d6b358;
+  color: black;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.call-btn:hover {
+  background-color: #e0aa38;
+}
+
+/* hamburger hidden on desktop */
+
+.hamburger {
+  display: none;
+}
+
+/* ---------- MOBILE STYLES ---------- */
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 60px;
+  }
+
+  .nav-container {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: auto;
+  }
+
+  /* hide contact btn on small screens */
+  .nav-contact {
+    display: none;
+  }
+
+  /* mobile dropdown menu */
+  .nav-links {
+    position: absolute;
+    top: 60px;       /* just below the navbar */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    display: none;   /* hidden until hamburger click */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    font-size: 1.05rem;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+.location-section {
+  padding: 60px 20px;
+  background: #1f1f1f;
+  color: #f5f5f5;
+}
+
+.location-details {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.location-details h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d6b358; /* matches your navbar accent */
+}
+
+/* layout: map + text side by side on desktop */
+.location-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Responsive map wrapper */
+.map-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Keep map responsive using aspect ratio */
+.map-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+}
+
+/* Text info */
+.location-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.location-info p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+/* Get Directions button */
+.direction-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: #d6b358;
+  color: #121212;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.direction-btn:hover {
+  background: #e0aa38;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile: stack map and text */
+@media (max-width: 768px) {
+  .location-section {
+    padding: 40px 16px;
+  }
+
+  .location-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .location-details h2 {
+    font-size: 1.7rem;
+  }
+}

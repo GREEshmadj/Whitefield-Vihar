@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -48,32 +48,13 @@
     }
 
     .gallery-container {
-      padding: 2em 1em;
-      max-width: 1200px;
-      margin: auto;
-      column-count: 3;
-      column-gap: 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      padding: 1.2rem;
     }
+    .gallery-container img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; }
 
-    .gallery-container a {
-      display: inline-block;
-      width: 100%;
-      margin-bottom: 1em;
-      break-inside: avoid;
-    }
-
-    .gallery-container img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .gallery-container img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
 
     /* Lightbox */
     .lightbox {
@@ -149,31 +130,161 @@
   </header>
 
   <div class="gallery-container">
-    <a href="#"><img src="images/about banner.jpg" alt="About Banner"></a>
-    <a href="#"><img src="images/adult birthday.PNG" alt="Adult Birthday"></a>
-    <a href="#"><img src="images/baby shower.PNG" alt="Baby Shower"></a>
-    <a href="#"><img src="images/bg_slide1.jpg" alt="Resort Slide"></a>
-    <a href="#"><img src="images/bgvideo - Made with Clipchamp.mp4" alt="Video Preview"></a>
-    <a href="#"><img src="images/birthday kid.PNG" alt="Kids Birthday"></a>
-    <a href="#"><img src="images/birthday with fam.PNG" alt="Family Birthday"></a>
-    <a href="#"><img src="images/boating.PNG" alt="Boating"></a>
-    <a href="#"><img src="images/burma bridge.PNG" alt="Burma Bridge"></a>
-    <a href="#"><img src="images/camp fire.jpeg" alt="Camp Fire"></a>
-    <a href="#"><img src="images/child birthday.PNG" alt="Child Birthday"></a>
-    <a href="#"><img src="images/clear bg.jpeg" alt="Golden Amoon"></a>
-    <a href="#"><img src="images/filler2 light screen.jpeg" alt="Filler 2"></a>
-    <a href="#"><img src="images/fillers1 screen.jpeg" alt="Filler 1"></a>
-    <a href="#"><img src="images/gallary4.jpeg" alt="Resort View"></a>
-    <a href="#"><img src="images/haldi.PNG" alt="Haldi"></a>
-    <a href="#"><img src="images/paintball.jpeg" alt="Paintball"></a>
-    <a href="#"><img src="images/photo shoot.PNG" alt="Photo Shoot"></a>
-    <a href="#"><img src="images/pool empty.jpeg" alt="Empty Pool"></a>
-    <a href="#"><img src="images/pool.jpeg" alt="Swimming Pool"></a>
-    <a href="#"><img src="images/prewedding shoot.PNG" alt="Pre Wedding"></a>
-    <a href="#"><img src="images/ring.jpeg" alt="Engagement Ring"></a>
-    <a href="#"><img src="images/rooms.PNG" alt="Rooms"></a>
-    <a href="#"><img src="images/sangeet.PNG" alt="Sangeet"></a>
-    <a href="#"><img src="images/wedding.PNG" alt="Wedding"></a>
+   <a href="#">
+  <img src="images/about banner.jpg"
+       srcset="images/about banner-small.jpg 480w, images/about banner-medium.jpg 800w, images/about banner-large.jpg 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="About Banner" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/adult birthday.PNG"
+       srcset="images/adult birthday-small.png 480w, images/adult birthday-medium.png 800w, images/adult birthday-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Adult Birthday" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/baby shower .PNG"
+       srcset="images/baby shower-small.png 480w, images/baby shower-medium.png 800w, images/baby shower-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Baby Shower" loading="lazy">
+</a>
+
+
+<a href="#">
+  <img src="images/birthday with fam.PNG"
+       srcset="images/birthday kid-small.png 480w, images/birthday kid-medium.png 800w, images/birthday kid-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Kids Birthday" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/boating.png"
+       srcset="images/birthday with fam-small.png 480w, images/birthday with fam-medium.png 800w, images/birthday with fam-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Family Birthday" loading="lazy">
+</a>
+
+
+<a href="#">
+  <img src="images/burma bridge.png"
+       srcset="images/burma bridge-small.png 480w, images/burma bridge-medium.png 800w, images/burma bridge-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Burma Bridge" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/camp fire.jpeg"
+       srcset="images/camp fire-small.jpeg 480w, images/camp fire-medium.jpeg 800w, images/camp fire-large.jpeg 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Camp Fire" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/child birthday.png"
+       srcset="images/child birthday-small.png 480w, images/child birthday-medium.png 800w, images/child birthday-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Child Birthday" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/clear bg.jpeg"
+       srcset="images/clear bg-small.jpeg 480w, images/clear bg-medium.jpeg 800w, images/clear bg-large.jpeg 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Golden Amoon" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/filler2 light screen.jpeg"
+       srcset="images/filler2 light screen-small.jpeg 480w, images/filler2 light screen-medium.jpeg 800w, images/filler2 light screen-large.jpeg 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Filler 2" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/fillers1 screen.jpeg"
+       srcset="images/fillers1 screen-small.jpeg 480w, images/fillers1 screen-medium.jpeg 800w, images/fillers1 screen-large.jpeg 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Filler 1" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/gallary4.jpeg"
+      
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Resort View" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/haldi.png"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Haldi" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/paintball.jpeg"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Paintball" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/photo shoot.png"
+       srcset="images/photo shoot-small.png 480w, images/photo shoot-medium.png 800w, images/photo shoot-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Photo Shoot" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/pool empty.jpeg"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Empty Pool" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/pool.jpeg"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Swimming Pool" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/prewedding shoot.png"
+       srcset="images/prewedding shoot-small.png 480w, images/prewedding shoot-medium.png 800w, images/prewedding shoot-large.png 1200w"
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Pre Wedding" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/ring.jpeg"
+      
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Engagement Ring" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/rooms.png"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Rooms" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/sangeet.png"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Sangeet" loading="lazy">
+</a>
+
+<a href="#">
+  <img src="images/wedding.png"
+       
+       sizes="(max-width:600px) 100vw, 33vw"
+       alt="Wedding" loading="lazy">
+</a>
   </div>
 
   <!-- Lightbox -->
@@ -198,6 +309,6 @@
       lightbox.classList.remove('active');
     });
   </script>
-
+<script src="scripts.js" defer></script>
 </body>
 </html>
