@@ -691,7 +691,6 @@ body {
 }
 
 /* links */
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -752,6 +751,12 @@ body {
   .nav-container {
     margin: 0;
     border-radius: 0;
+    /* FIX 1: Add padding to the container itself so content doesn't hit screen edges */
+    padding: 0 15px; 
+    /* Ensure it behaves like a flex container on mobile to align elements */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   /* show hamburger */
@@ -761,6 +766,8 @@ body {
     cursor: pointer;
     color: #fff;
     margin-left: auto;
+    /* FIX 2: Ensure no extra margin/padding pushes it off-screen */
+    padding: 0; 
   }
 
   /* hide contact btn on small screens */
@@ -774,16 +781,25 @@ body {
     top: 60px;       /* just below the navbar */
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0);
+    /* FIX 3: Give it a solid background for readability */
+    background: #000; 
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 12px 0;
     display: none;   /* hidden until hamburger click */
+    /* FIX 4: Explicitly set width to 100% to cover the whole viewport width */
+    width: 100%;
   }
 
   .nav-links.active {
     display: flex;
+  }
+  
+  /* FIX 5: Ensure list items take full width to center text correctly */
+  .nav-links li {
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links li a {
@@ -791,8 +807,10 @@ body {
     padding: 10px 0;
     width: 100%;
     text-align: center;
+    display: block; /* Make the whole area clickable and center properly */
   }
 }
+
 
 img, video {
   max-width: 100%;
