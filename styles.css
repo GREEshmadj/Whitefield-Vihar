@@ -327,7 +327,7 @@ about stylying
   margin-top: 2em;
 }
 .footer {
-  background: #08080818;
+  background: #00000018;
   color: #000000;
   text-align: center;
   padding: 40px 20px;
@@ -340,7 +340,7 @@ about stylying
 }
 
 .footer p {
-  color: #ccc;
+  color: #020202;
   font-size: 15px;
   margin-bottom: 10px;
 }
@@ -360,7 +360,7 @@ about stylying
 }
 
 .mobile-cta {
-  background: #ffcc00;
+  background: #c8ae483f;
   color: #000;
   padding: 8px 14px;
   border-radius: 6px;
@@ -379,14 +379,14 @@ about stylying
 }
 
 .footer-links a {
-  color: #fff;
+  color: #000000;
   font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ffcc00;
+  color: #000000;
 }
 
 .footer .copyright {
@@ -601,103 +601,52 @@ about stylying
   font-size: 1.1rem;
 }
 
-/*call button*/
-
-.mobile-cta{
- position: fixed;
- bottom: 14px;
- left: 50%;
- transform: translateX(-50%);
- z-index: 999;
- background: linear-gradient(90deg,#ff7a2d,#d6b358);
- color: #000;
- padding: 12px 18px;
- border-radius: 0px;
- font-weight: 700;
- box-shadow: 0 8px 20px rgba(0,0,0,0.15);
- display: none;
-}
-/* show only on small screens */
-@media (max-width: 768px){
-  .mobile-cta { display: block; }
-}
-
-@media (max-width: 480px) {
-  body { font-size: 16px; }
-  .tagline { color: #fff; opacity: .95; }
-  .nav-links li a { color: #fff; }
-}
-
-
-/* Navbar Styles */
-/* ---------- BASE / DESKTOP STYLES ---------- */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  scroll-behavior: smooth;
-  padding-top: 70px; /* so content doesn't hide behind navbar */
-  background: #2b2b2b;
-  color: #fff;
-}
-
-/* ---------- NAVBAR (DESKTOP BASE) ---------- */
-
 .navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;              /* full width – no more cutting */
-  background: transparent;
-  z-index: 1000;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 8px auto;
-  padding: 8px 16px;
-  background-color: #111;             /* pill background */
-  border-radius: 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  width: 100%;
 }
-
-/* logo */
 
 .logo-combo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
 }
 
-.logo-combo .logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
   border-radius: 50%;
 }
 
-.logo-combo .logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
-  color: #d6b147;
-  font-weight: bold;
-  white-space: nowrap;
+.logo-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-/* links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.2rem;
   margin: 0;
   padding: 0;
-  flex: 1;                /* use remaining space */
+  flex: 1;
   justify-content: center;
 }
 
@@ -714,9 +663,9 @@ body {
 }
 
 /* call button */
-
 .nav-contact {
   white-space: nowrap;
+  display: block;
 }
 
 .call-btn {
@@ -734,82 +683,6 @@ body {
   background-color: #e0aa38;
 }
 
-/* hamburger hidden on desktop */
-
-.hamburger {
-  display: none;
-}
-
-/* ---------- MOBILE STYLES ---------- */
-
-@media (max-width: 768px) {
-
-  body {
-    padding-top: 60px;
-  }
-
-  .nav-container {
-    margin: 0;
-    border-radius: 0;
-    /* FIX 1: Add padding to the container itself so content doesn't hit screen edges */
-    padding: 0 15px; 
-    /* Ensure it behaves like a flex container on mobile to align elements */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* show hamburger */
-  .hamburger {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    color: #fff;
-    margin-left: auto;
-    /* FIX 2: Ensure no extra margin/padding pushes it off-screen */
-    padding: 0; 
-  }
-
-  /* hide contact btn on small screens */
-  .nav-contact {
-    display: none;
-  }
-
-  /* mobile dropdown menu */
-  .nav-links {
-    position: absolute;
-    top: 60px;       /* just below the navbar */
-    left: 0;
-    right: 0;
-    /* FIX 3: Give it a solid background for readability */
-    background: #000; 
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 0;
-    display: none;   /* hidden until hamburger click */
-    /* FIX 4: Explicitly set width to 100% to cover the whole viewport width */
-    width: 100%;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-  
-  /* FIX 5: Ensure list items take full width to center text correctly */
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links li a {
-    font-size: 1.05rem;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    display: block; /* Make the whole area clickable and center properly */
-  }
-}
 
 
 img, video {
@@ -818,13 +691,20 @@ img, video {
 }
 .location-section {
   padding: 60px 20px;
-  background: #1f1f1f;
-  color: #f5f5f5;
+  background: #f9f9f994;
+  color: #060606;
+  
 }
 
 .location-details {
   max-width: 1100px;
   margin: 0 auto;
+  color: #000;
+}
+
+
+.location-text {
+  color: #1b1c1b;
 }
 
 .location-details h2 {
@@ -832,6 +712,7 @@ img, video {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #d6b358; /* matches your navbar accent */
+
 }
 
 /* layout: map + text side by side on desktop */
@@ -840,6 +721,7 @@ img, video {
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   align-items: start;
+  color: #000;
 }
 
 /* Responsive map wrapper */
