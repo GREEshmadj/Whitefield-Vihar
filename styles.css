@@ -685,6 +685,43 @@ about stylying
 
 
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+  
+  .call-btn {
+    font-size: 0.8rem;
+    padding: 0.3em 0.6em;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+
 img, video {
   max-width: 100%;
   height: auto;
