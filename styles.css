@@ -609,9 +609,6 @@ about stylying
   left: 0;
   width: 100%;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav-container {
@@ -619,6 +616,8 @@ about stylying
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo-combo {
@@ -646,8 +645,6 @@ about stylying
   gap: 1.2rem;
   margin: 0;
   padding: 0;
-  flex: 1;
-  justify-content: center;
 }
 
 .nav-links li a {
@@ -683,39 +680,56 @@ about stylying
   background-color: #e0aa38;
 }
 
+.hamburger {
+  display: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem;
-  }
-  
   .nav-container {
     flex-direction: column;
+    align-items: flex-start;
   }
   
   .nav-links {
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 0;
   }
   
-  .nav-links li a {
-    font-size: 0.9rem;
+  .nav-links.show {
+    display: flex;
   }
   
-  .call-btn {
-    font-size: 0.8rem;
-    padding: 0.3em 0.6em;
+  .nav-links li {
+    margin-bottom: 1rem;
   }
   
-  .logo {
-    width: 40px;
-    height: 40px;
+  .nav-contact {
+    display: none;
   }
   
-  .logo-text {
-    font-size: 1rem;
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: none;
   }
 }
 
