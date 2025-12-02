@@ -688,7 +688,7 @@ about stylying
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .nav-container {
       box-sizing: border-box;
       display: flex;
