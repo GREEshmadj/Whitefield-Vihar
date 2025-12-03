@@ -74,7 +74,7 @@ h1 {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background: #ff6a00;
+  background: #cfa63f;
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
@@ -327,7 +327,7 @@ about stylying
   margin-top: 2em;
 }
 .footer {
-  background: #00000018;
+  background: #f7f2e9;
   color: #000000;
   text-align: center;
   padding: 40px 20px;
