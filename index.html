@@ -9,45 +9,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Bodoni:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  });
-</script>
-
 
 <body>
+  <section>
     <!-- Navigation Bar -->
- <nav class="navbar">
-  <div class="nav-container">
-    <a href="#" class="logo-combo">
-      <img src="images/logo.jpg" alt="Resort Logo" class="logo" />
-      <span class="logo-text">Whitefield <br> Vihar</span>
-    </a>
 
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#Ammenities">Ammenities</a></li>
-      <li><a href="#Packages">Packages</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="#Reviews">Reviews</a></li>
-
-    </ul>
-
-    <div class="nav-contact">
-      <a href="tel:9845270048" class="call-btn">📞 Enquire now : 9845270048</a>
+  <!-- Top bar (visible on all screens) -->
+  <div class="nav-bar">
+    <div class="brand">
+      <!-- put your logo here -->
+      <img src="images/logo.jpg" alt="Whitefield Vihar Logo" class="brand-logo">
+      <span class="brand-name">Whitefield Vihar</span>
     </div>
 
-    <!-- 🔹 Only ONE hamburger, with an ID -->
-    <div class="hamburger" id="hamburger">&#9776;</div>
+    <!-- Hamburger -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-</nav>
 
+  <!-- Dark overlay behind the side nav -->
+  <div class="nav-overlay"></div>
+
+  <!-- Side navigation drawer -->
+  <nav class="side-nav">
+    <div class="side-nav-header">
+      <img src="images/logo.png" alt="Whitefield Vihar Logo" class="brand-logo">
+      <span class="brand-name">Whitefield Vihar</span>
+    </div>
+
+    <a href="#about">About</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#packages">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#reviews">Reviews</a>
+
+    <div class="nav-contact">
+      <a href="tel:9845270048" class="call-btn">
+        📞 Enquire now : 9845270048
+      </a>
+    </div>
+  </nav>
+  </section>
 
   <!-- Hero Section -->
    <header class="hero">
@@ -535,6 +540,30 @@ Since 2014, we have upheld a proud tradition of excellence, creating unforgettab
       filterEvents(categories[current]);
     }, 5000); // every 5 seconds
 
+    document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn  = document.querySelector('.nav-toggle');
+  const overlay    = document.querySelector('.nav-overlay');
+  const sideNav    = document.querySelector('.side-nav');
+  const sideLinks  = sideNav ? sideNav.querySelectorAll('a') : [];
+
+  function toggleNav() {
+    document.body.classList.toggle('nav-open');
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleNav);
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', toggleNav);
+  }
+
+  sideLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+    });
+  });
+});
 
     src="script.js";
   </script>
